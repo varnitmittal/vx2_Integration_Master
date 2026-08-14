@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Supported_Categories__c</fullName>
+    <description>Separated by semicolon, and no spaces anywhere</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Supported Categories</label>
+    <length>2000</length>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

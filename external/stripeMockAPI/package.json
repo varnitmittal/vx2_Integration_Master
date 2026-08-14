@@ -1,0 +1,15 @@
+{
+  "name": "mock-stripe-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mock Stripe API for Salesforce integration testing",
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev",
+    "deploy": "netlify deploy",
+    "deploy:prod": "netlify deploy --prod"
+  },
+  "devDependencies": {
+    "netlify-cli": "^23.0.0"
+  }
+}

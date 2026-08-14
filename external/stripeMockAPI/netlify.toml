@@ -1,0 +1,9 @@
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+
+[dev]
+  framework = "#static"
+  functions = "netlify/functions"

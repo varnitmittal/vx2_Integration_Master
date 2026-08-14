@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Attempts__c</fullName>
+    <label>Total Attempts</label>
+    <summarizedField>Integration_Attempt__c.Attempt_Number__c</summarizedField>
+    <summaryForeignKey>Integration_Attempt__c.Integration_Log__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

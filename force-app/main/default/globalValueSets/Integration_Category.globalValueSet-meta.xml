@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>HTTP_Outbound</fullName>
+        <default>false</default>
+        <label>HTTP_Outbound</label>
+    </customValue>
+    <customValue>
+        <fullName>HTTP_Inbound</fullName>
+        <default>false</default>
+        <label>HTTP_Inbound</label>
+    </customValue>
+    <customValue>
+        <fullName>Platform_Event_Outbound</fullName>
+        <default>false</default>
+        <label>Platform_Event_Outbound</label>
+    </customValue>
+    <customValue>
+        <fullName>Platform_Event_Inbound</fullName>
+        <default>false</default>
+        <label>Platform_Event_Inbound</label>
+    </customValue>
+    <customValue>
+        <fullName>File_Outbound</fullName>
+        <default>false</default>
+        <label>File_Outbound</label>
+    </customValue>
+    <customValue>
+        <fullName>File_Inbound</fullName>
+        <default>false</default>
+        <label>File_Inbound</label>
+    </customValue>
+    <customValue>
+        <fullName>Scheduled</fullName>
+        <default>false</default>
+        <label>Scheduled</label>
+    </customValue>
+    <customValue>
+        <fullName>Middleware</fullName>
+        <default>false</default>
+        <label>Middleware</label>
+    </customValue>
+    <masterLabel>Integration Category</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

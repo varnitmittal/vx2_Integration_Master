@@ -1,0 +1,25 @@
+<template>
+  <lightning-quick-action-panel header="Snapshot This Record">
+    <template lwc:if={errorMessage}>
+      <div class="slds-notify slds-notify_alert slds-alert_error slds-m-bottom_medium" role="alert">
+
+        <span class="slds-assistive-text">Error</span>
+
+        <lightning-icon icon-name="utility:error" alternative-text="Error" variant="inverse" size="x-small"
+          class="slds-m-right_small">
+        </lightning-icon>
+
+        <h2>{errorMessage}</h2>
+      </div>
+    </template>
+    <div class="slds-p-around_medium">
+      Are you sure you want to snapshot this {objectApiName} to backup ERP?
+    </div>
+    <div slot="footer">
+      <lightning-button label="Cancel" onclick={handleCancel}></lightning-button>
+
+      <lightning-button variant="brand" label="Confirm" onclick={handleConfirm}
+        class="slds-m-left_small"></lightning-button>
+    </div>
+  </lightning-quick-action-panel>
+</template>
