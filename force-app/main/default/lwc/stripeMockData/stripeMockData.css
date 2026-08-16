@@ -1,0 +1,10 @@
+.response-body {
+    background: #f3f3f3;
+    border: 1px solid #dddbda;
+    border-radius: 4px;
+    padding: 1rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 300px;
+    overflow: auto;
+}

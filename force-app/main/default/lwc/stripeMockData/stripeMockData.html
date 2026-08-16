@@ -1,0 +1,105 @@
+<template>
+  <lightning-quick-action-panel header="Get Stripe Data">
+
+    <template lwc:if={errorMessage}>
+      <div class="slds-notify slds-notify_alert slds-alert_error slds-m-bottom_medium" role="alert">
+
+        <span class="slds-assistive-text">Error</span>
+
+        <lightning-icon icon-name="utility:error" alternative-text="Error" variant="inverse" size="x-small"
+          class="slds-m-right_small">
+        </lightning-icon>
+
+        <h2>{errorMessage}</h2>
+      </div>
+    </template>
+
+    <div class="slds-p-around_medium">
+
+      <lightning-input type="number" label="HTTP Status Code" value={statusCode} min="100" max="599" step="1" required
+        onchange={handleStatusCodeChange} onkeydown={handleInputKeyDown}>
+      </lightning-input>
+
+      <template lwc:if={isLoading}>
+        <div class="slds-is-relative slds-m-top_medium">
+          <lightning-spinner alternative-text="Calling Stripe Mock API" size="small">
+          </lightning-spinner>
+        </div>
+      </template>
+
+      <template lwc:if={hasResponse}>
+        <div class="slds-m-top_large">
+
+          <h3 class="slds-text-heading_small slds-m-bottom_small">
+            Response
+          </h3>
+
+          <div class="slds-grid slds-wrap slds-gutters">
+
+            <div class="slds-col slds-size_1-of-2">
+              <div class="slds-box slds-theme_default">
+                <strong>Status Code</strong>
+                <div class="slds-text-heading_medium">
+                  {response.statusCode}
+                </div>
+              </div>
+            </div>
+
+            <div class="slds-col slds-size_1-of-2">
+              <div class="slds-box slds-theme_default">
+                <strong>Status</strong>
+                <div>
+                  {response.status}
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="slds-m-top_medium">
+            <h3 class="slds-text-heading_small slds-m-bottom_x-small">
+              Response Body
+            </h3>
+
+            <pre class="response-body">{responseBody}</pre>
+          </div>
+
+          <div class="slds-m-top_medium">
+            <h3 class="slds-text-heading_small slds-m-bottom_x-small">
+              Response Headers
+            </h3>
+
+            <template for:each={responseHeaders} for:item="header">
+
+              <div key={header.key} class="slds-grid slds-wrap slds-p-vertical_x-small">
+
+                <div class="slds-col slds-size_1-of-3">
+                  <strong>{header.key}</strong>
+                </div>
+
+                <div class="slds-col slds-size_2-of-3">
+                  {header.value}
+                </div>
+
+              </div>
+            </template>
+          </div>
+
+        </div>
+      </template>
+
+    </div>
+
+    <div slot="footer">
+
+      <lightning-button label="Cancel" onclick={handleCancel}>
+      </lightning-button>
+
+      <lightning-button variant="brand" label="Send" onclick={handleSend} disabled={isLoading}
+        class="slds-m-left_small">
+      </lightning-button>
+
+    </div>
+
+  </lightning-quick-action-panel>
+</template>
